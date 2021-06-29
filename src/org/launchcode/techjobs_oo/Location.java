@@ -12,7 +12,7 @@ public class Location {
         nextId++;
     }
 
-    public assignValue(String aValue) {
+    public Location(String aValue) {
         this();
         this.value = aValue;
     }
