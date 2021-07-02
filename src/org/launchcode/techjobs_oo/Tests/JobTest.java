@@ -37,13 +37,13 @@ public class JobTest {
         assertEquals(true, test_jobThree.getName() instanceof String);
         assertEquals("Product Tester", test_jobThree.getName());
         assertEquals(true, test_jobThree.getEmployer() instanceof Employer);
-        assertEquals("ACME", test_jobThree.getEmployer());
+        assertEquals("ACME", test_jobThree.getEmployer().getValue());
         assertEquals(true, test_jobThree.getLocation() instanceof Location);
-        assertEquals("Desert", test_jobThree.getLocation());
+        assertEquals("Desert", test_jobThree.getLocation().getValue());
         assertEquals(true, test_jobThree.getPositionType() instanceof PositionType);
-        assertEquals("Quality Control", test_jobThree.getPositionType());
+        assertEquals("Quality Control", test_jobThree.getPositionType().getValue());
         assertEquals(true, test_jobThree.getCoreCompetency() instanceof CoreCompetency);
-        assertEquals("Persistence", test_jobThree.getCoreCompetency());
+        assertEquals("Persistence", test_jobThree.getCoreCompetency().getValue());
     }
 
     @Test
