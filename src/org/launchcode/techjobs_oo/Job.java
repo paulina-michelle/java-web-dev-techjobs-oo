@@ -40,6 +40,65 @@ public class Job {
         return Objects.hash(id);
     }
 
+    @Override
+    public String toString() {
+        String emptyFieldMessage = "Data not available";
+        String returnedName;
+        String returnedEmployer;
+        String returnedLocation;
+        String returnedPositionType;
+        String returnedCoreCompetency;
+
+        if (getName() == null) {
+            returnedName = emptyFieldMessage;
+        }
+        else {
+            returnedName = getName();
+        }
+
+
+        if (getEmployer() == null) {
+            returnedEmployer = emptyFieldMessage;
+        }
+        else {
+            returnedEmployer = getEmployer().toString();
+        }
+
+
+        if (getLocation() == null) {
+            returnedLocation = emptyFieldMessage;
+        }
+        else {
+            returnedLocation = getLocation().toString();
+        }
+
+
+        if (getPositionType() == null) {
+            returnedPositionType = emptyFieldMessage;
+        }
+        else {
+            returnedPositionType = getPositionType().toString();
+        }
+
+
+        if (getCoreCompetency() == null) {
+            returnedCoreCompetency = emptyFieldMessage;
+        }
+        else {
+            returnedCoreCompetency = getCoreCompetency().toString();
+        }
+
+
+        return "\n" +
+           "ID: " + getId() +
+           "\nName: " + returnedName +
+           "\nEmployer: " + returnedEmployer +
+           "\nLocation: " + returnedLocation +
+           "\nPosition Type: " + returnedPositionType +
+           "\nCore Competency: " + returnedCoreCompetency
+           + "\n";
+    }
+
     public String getName() {
         return name;
     }

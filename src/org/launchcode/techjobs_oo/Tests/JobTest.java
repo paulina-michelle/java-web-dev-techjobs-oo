@@ -50,4 +50,32 @@ public class JobTest {
     public void testJobsForEquality () {
         assertFalse(test_jobThree.equals(test_jobFour));
     }
+
+    @Test
+    public void testBlankBeforeAndAfterJob () {
+        assertTrue(test_jobThree.toString().startsWith("\n"));
+        assertTrue(test_jobThree.toString().endsWith("\n"));
+    //should return a string that contains a blank line before and after the job information)
+    }
+
+    @Test
+    public void testToStringReturnsProperLabelsAndValues () {
+        System.out.println(test_jobThree.toString());
+        assertEquals("\nID:"+ test_jobThree.getId() +
+                    "\nName:" + test_jobThree.getName() +
+                    "\nEmployer:" + test_jobThree.getEmployer() +
+                    "\nLocation:" + test_jobThree.getLocation() +
+                    "\nPosition Type:" + test_jobThree.getPositionType() +
+                    "\nCore Competency:" + test_jobThree.getCoreCompetency()+ "\n", test_jobThree.toString());
+    }
+
+    @Test
+    public void addsMessageToEmptyField () {
+        assertEquals("\nID: " + test_jobOne.getId() +
+                "\nName: Data not available" +
+                "\nEmployer: Data not available" +
+                "\nLocation: Data not available" +
+                "\nPosition Type: Data not available" +
+                "\nCore Competency: Data not available" + "\n", test_jobOne.toString());
+    }
 }
