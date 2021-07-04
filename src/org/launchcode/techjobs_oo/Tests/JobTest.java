@@ -60,7 +60,7 @@ public class JobTest {
 
     @Test
     public void testToStringReturnsProperLabelsAndValues () {
-        System.out.println(test_jobThree.toString());
+        //System.out.println(test_jobThree.toString());
         assertEquals("\nID: "+ test_jobThree.getId() +
                     "\nName: " + test_jobThree.getName() +
                     "\nEmployer: " + test_jobThree.getEmployer() +
