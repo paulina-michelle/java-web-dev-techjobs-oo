@@ -61,12 +61,12 @@ public class JobTest {
     @Test
     public void testToStringReturnsProperLabelsAndValues () {
         System.out.println(test_jobThree.toString());
-        assertEquals("\nID:"+ test_jobThree.getId() +
-                    "\nName:" + test_jobThree.getName() +
-                    "\nEmployer:" + test_jobThree.getEmployer() +
-                    "\nLocation:" + test_jobThree.getLocation() +
-                    "\nPosition Type:" + test_jobThree.getPositionType() +
-                    "\nCore Competency:" + test_jobThree.getCoreCompetency()+ "\n", test_jobThree.toString());
+        assertEquals("\nID: "+ test_jobThree.getId() +
+                    "\nName: " + test_jobThree.getName() +
+                    "\nEmployer: " + test_jobThree.getEmployer() +
+                    "\nLocation: " + test_jobThree.getLocation() +
+                    "\nPosition Type: " + test_jobThree.getPositionType() +
+                    "\nCore Competency: " + test_jobThree.getCoreCompetency()+ "\n", test_jobThree.toString());
     }
 
     @Test
